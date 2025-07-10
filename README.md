@@ -31,7 +31,7 @@ It lets you take photos from your webcam, decorate them with emoji stickers, and
 ##  Made With Love By
 
 Tanya
-✨ A developer who loves building cute & creative web projects!
+✨ A developer who loves building creative web projects!
 
 ---
 
