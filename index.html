@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- <base href="/pixelpop-photobooth/"> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Booth</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="startscreen">
+        <h1>Welcome to PixelPop PhotoBooth!</h1>
+        <p>Click below to enter the Photobooth📸</p>
+        <button class="snap">Enter Booth</button>
+    </div>
+    <div class="boothscreen" style="display:none">
+        <div class="video-box">
+            <div class="countdown" style="display: none;"></div>
+            <video class="video" autoplay playsinline></video>
+        </div>
+        <div class="msg">Select a filter, start capture, and pose 4 times!</div>
+        <div class="filters">
+            <button class="filter-btn" data-filter="none">No Filter</button>
+            <button class="filter-btn" data-filter="grayscale(100%)">GrayScale</button>
+            <button class="filter-btn" data-filter="sepia(40%) contrast(1.1) brightness(1.1)">Vintage Peach</button>
+            <button class="filter-btn" data-filter="contrast(1.3) saturate(1.4)">🌞 Pop Color</button>
+            <button class="filter-btn" data-filter="brightness(1.2) hue-rotate(15deg)">🌈 Soft Glow</button>
+            <button class="filter-btn" data-filter="blur(1px) brightness(1.3)">💭 Dreamy</button>
+        </div>
+        <button class="capture">Start Capture</button>
+    </div>
+    <div class="stripscreen" style="display:none;">
+        <div class="strip-container">
+            <div class="strip-canvas" id = "stripcanvas">
+                <div class="frame">
+                    <img id="strip1" class="strip-photo" style="background: #ccc; width: 180px; height: 125px;" />
+                    <img id="strip2" class="strip-photo" style="background: #ccc; width: 180px; height: 125px;" />
+                    <img id="strip3" class="strip-photo" style="background: #ccc; width: 180px; height: 125px;" />
+                    <img id="strip4" class="strip-photo" style="background: #ccc; width: 180px; height: 125px;" />
+
+                    <p class="timestamp" id = "timestamp">PixelPop • 07/07/2025</p>
+                </div>
+            </div>
+            <div class="strip-controls">
+                <h2>Your Photo-strip is ready!</h2>
+                <p>Drag your fav emojies and download your memory!</p>
+
+                <div class="emojies">
+                    <span class="emoji draggable" draggable="true" data-emoji = "❤️">❤️</span>
+                    <span class="emoji draggable" draggable="true" data-emoji = "🧸">🧸</span>
+                    <span class="emoji draggable" draggable="true" data-emoji = "💋">💋</span>
+                    <span class="emoji draggable" draggable="true" data-emoji = "🎀">🎀</span>
+                    <span class="emoji draggable" draggable="true" data-emoji = "🐼">🐼</span>
+                </div>
+
+                <div class="buttons">
+                    <button class="control download">Download</button>
+                    <button class="control retake">Retake</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <canvas class="canvas" style="display: none;"></canvas>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+<script src="script.js"></script>
+
+</html>

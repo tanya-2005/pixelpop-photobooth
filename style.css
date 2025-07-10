@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Pixelify+Sans:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'poppins';
+    background: radial-gradient(circle at center, #BBE1FA 0%, #E0F7FF 50%, #F7FCFF 100%);
+    background-size: 150% 150%;
+    animation: floatLight 15s ease-in-out infinite;
+
+
+    @keyframes floatLight {
+
+        0%,
+        100% {
+            background-position: center;
+            background-size: 150% 150%;
+        }
+
+        50% {
+            background-size: 160% 160%;
+        }
+    }
+
+    justify-content: center;
+    align-items: center;
+}
+
+.startscreen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+    gap: 20px
+}
+
+.startscreen>h1 {
+    font-size: 45px;
+    color: #011226;
+}
+
+.startscreen>p {
+    font-size: 20px;
+    margin-top: 25px;
+    color: rgb(11, 3, 3);
+}
+
+.snap {
+    width: 125px;
+    height: 45px;
+    font-size: 17px;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #011226;
+    color: white;
+    transition: all 0.6 ease;
+
+}
+
+.snap:hover {
+    transform: scale(1.05);
+    background-color: #001f3f;
+}
+
+.boothscreen {
+    margin-top: 30px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+video.video {
+    width: 45vw;
+    height: 65vh;
+    background-color: transparent;
+    border: 6px solid #BBE1FA;
+    border-radius: 20px;
+    object-fit: cover;
+    transform: scaleX(-1);
+}
+
+.video-box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+}
+
+.video {
+  position: relative;
+  z-index: 1;
+}
+
+.countdown {
+    position: absolute;
+    font-size: 80px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+    pointer-events: none;
+}
+
+
+
+.filters {
+    display: flex;
+    justify-content: center;
+    /* margin-left:380px; */
+    margin-top: 40px;
+    gap: 20px;
+}
+
+.filters button {
+    width: 120px;
+    height: 50px;
+    border-radius: 30px;
+    background-color: transparent;
+    border: 2.5px solid black;
+    /* font-weight:bold; */
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.filter-btn:hover {
+    background-color: rgba(174, 223, 247, 0.4);
+    /* soft pastel blue */
+    border-color: #88BFE8;
+    color: #062E5A;
+}
+
+.filter-btn.active,
+.filter-btn:focus {
+    background-color: #D0E9F8;
+    /* slightly stronger blue */
+    border-color: #62B1E4;
+    color: #062E5A;
+}
+
+
+.msg {
+    display: block; /* revert to normal block flow */
+    text-align: center;
+    margin-top: 10px;
+}
+
+.capture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 140px;
+    height: 50px;
+    border-radius: 30px;
+    margin-top: 27px;
+    font-size: 18px;
+    background-color: #062E5A;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.capture:hover {
+    background-color: #0A3F82;
+    /* a rich, velvety blue */
+    box-shadow: 0 4px 12px rgba(6, 46, 90, 0.3);
+}
+
+.strip-container {
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.frame {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 38px;
+    /* transform: rotate(-5deg); */
+    /* Try -5deg or +5deg */
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+}
+
+.strip-photo {
+    object-fit: cover;
+    display: block;
+}
+
+.strip-controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 12px;
+}
+
+.strip-controls>h2 {
+    font-size: 35px;
+}
+
+.emojies {
+    font-size: 30px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 15px;
+}
+
+.control {
+    width: 110px;
+    height: 50px;
+    font-size: 17px;
+    border-radius: 40px;
+    background-color: #062E5A;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2 ease;
+}
+
+.control:hover {
+    background-color: #0A3F82;
+    /* a rich, velvety blue */
+    box-shadow: 0 4px 12px rgba(6, 46, 90, 0.3);
+}
+
+.strip-canvas {
+  position: relative;
+  display: inline-block;
+}
+
+.strip-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sticker {
+  position: absolute;
+  font-size: 2rem;
+  touch-action: none; /* Important for mobile */
+  transition: transform 0.2s ease, left 0.3s ease, top 0.3s ease;
+  user-select: none;
+  cursor: grab;
+}
+
+@media (max-width: 768px) {
+  .startscreen h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .startscreen p {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .video {
+    width: 90vw;
+    height: 40vh;
+  }
+
+  video.video {
+    width: 85vw; /* wider on small screens */
+    height: auto; /* maintain aspect ratio */
+    aspect-ratio: 3 / 4; /* standard portrait aspect ratio */
+    border-radius: 15px;
+  }
+
+  .video-box {
+    margin-top: 20px;
+  }
+
+  .msg {
+    font-size: 16px;
+    margin: 10px 20px;
+  }
+
+  .filters {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0 10px;
+    justify-content: center;
+  }
+
+  .filters button {
+    width: 45%;
+    margin: 5px 0;
+  }
+
+  .capture {
+    width: 80%;
+    font-size: 16px;
+    height: 45px;
+    margin-top: 20px;
+  }
+
+  .strip-container {
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .strip-controls h2 {
+    font-size: 24px;
+  }
+
+  .emojies {
+    font-size: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+  }
+
+  .control {
+    width: 70%;
+    height: 45px;
+    font-size: 16px;
+    
+  }
+
+  .frame {
+    transform: none;
+    padding: 20px;
+    gap: 10px;
+  }
+
+  .strip-photo {
+    width: 140px;
+    height: 100px;
+  }
+
+  .timestamp {
+    font-size: 12px;
+  }
+
+  .countdown {
+    font-size: 50px;
+  }
+}
+
+
